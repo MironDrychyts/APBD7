@@ -52,10 +52,10 @@ public class WareHouseController : ControllerBase
         double totalPrice = productPrice * addProductWarehouse.Amount;
 
         _iWareHouseRepository.AddProductWareHouseRecord(orderId, addProductWarehouse.IdProduct, addProductWarehouse.IdWareHouse, addProductWarehouse.Amount, totalPrice);
+
+
         
-        
-        
-        return Ok();
+        return Created("api/warehouse",addProductWarehouse);
     }
 
     [HttpPut]

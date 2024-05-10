@@ -190,7 +190,7 @@ public class WareHouseRepository : IWareHouseRepository
 
                 
                 command.CommandText =
-                    "SELECT IdOrder FROM [Order] WHERE IdProduct = @IdProduct AND Amount = @Amount AND CreatedAt > @CreatedAt";
+                    "SELECT IdOrder FROM [Order] WHERE IdProduct = @IdProduct AND Amount = @Amount AND CreatedAt < @CreatedAt";
                 
                 int IdOrder = -1;
                 
